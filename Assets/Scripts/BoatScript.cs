@@ -1,19 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
 
 public class BoatScript : MonoBehaviour
 {
     public PropellerBoats boat;
-    public GameObject velocity;
+    public GameObject button;
 
-    void Update()
+	void Start(){
+	}
+	
+    void FixedUpdate()
     {
-        
-        Debug.Log(velocity.transform.localPosition.y);
-        if (velocity.transform.localPosition.z >= -0.25f)
+        //Debug.Log(button.GetComponent<LinearMapping>().value);
+        if (button.GetComponent<LinearMapping>().value < 0.25f)
             boat.ThrottleUp();
-        if (velocity.transform.localPosition.z <= -0.10f)
-            boat.ThrottleDown();
+        if (button.GetComponent<LinearMapping>().value > 0.75f){
+			boat.ThrottleDown();
+			boat.Brake();
+		}
     }
 }
