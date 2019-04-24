@@ -7,7 +7,8 @@ public class ColectionableScript : MonoBehaviour
 	public GameObject teleportpoint;
 	void OnCollisionEnter (Collision col)
     {
-        if(col.gameObject.tag == "collectable")
+		Debug.Log(col.gameObject.tag);
+        if(col.gameObject.tag == "Collectable")
         {
             col.gameObject.transform.position = teleportpoint.transform.position;
         }

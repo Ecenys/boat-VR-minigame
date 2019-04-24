@@ -32,7 +32,14 @@ public class CageScript : MonoBehaviour
 		if(transform.position == point.transform.position){
 			caido = false;
 			tiempo = 0;
-			transform.Rotate(Vector3.zero);
+			transform.rotation = point.transform.rotation;
+		}
+		if (transform.position.y < -50)
+		{
+			GetComponent<Rigidbody>().isKinematic = true;
+			transform.position = point.transform.position;
+			transform.rotation = point.transform.rotation;
+			
 		}
         
     }

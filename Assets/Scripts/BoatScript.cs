@@ -11,7 +11,7 @@ public class BoatScript : MonoBehaviour
 	void Start(){
 	}
 	
-    void FixedUpdate()
+    void Update()
     {
         //Debug.Log(button.GetComponent<LinearMapping>().value);
         if (button.GetComponent<LinearMapping>().value < 0.25f)

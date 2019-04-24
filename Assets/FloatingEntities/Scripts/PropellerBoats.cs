@@ -71,10 +71,22 @@ public class PropellerBoats : MonoBehaviour
     angle -= 0.9F;
     angle = Mathf.Clamp(angle, -90F, 90F);
   }
+  
+  public void LessRudderRight()
+  {
+    angle -= 0.45F;
+    angle = Mathf.Clamp(angle, -90F, 90F);
+  }
 
   public void RudderLeft()
   {
     angle += 0.9F;
+    angle = Mathf.Clamp(angle, -90F, 90F);
+  }
+  
+  public void LessRudderLeft()
+  {
+    angle += 0.45F;
     angle = Mathf.Clamp(angle, -90F, 90F);
   }
 
