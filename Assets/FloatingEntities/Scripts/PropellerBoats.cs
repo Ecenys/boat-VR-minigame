@@ -48,6 +48,13 @@ public class PropellerBoats : MonoBehaviour
     if (throttle > 1)
       throttle = 1;
   }
+  
+  public void LittleThrottleUp()
+  {
+    throttle += acceleration_cst * 0.001F;
+    if (throttle > 0.5f)
+      throttle = 0.5f;
+  }
 
   public void ThrottleDown()
   {

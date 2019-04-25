@@ -16,6 +16,8 @@ public class BoatScript : MonoBehaviour
         //Debug.Log(button.GetComponent<LinearMapping>().value);
         if (button.GetComponent<LinearMapping>().value < 0.25f)
             boat.ThrottleUp();
+		if (button.GetComponent<LinearMapping>().value <= 0.25f || button.GetComponent<LinearMapping>().value < 0.4f)
+            boat.LittleThrottleUp();
         if (button.GetComponent<LinearMapping>().value > 0.75f){
 			boat.ThrottleDown();
 			boat.Brake();
