@@ -1,1 +1,1 @@
-# boat-VR-minigame
+# Boat VR Minigame
